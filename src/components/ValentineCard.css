@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.valentine-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #2d1e2f, #1a1a2e); /* Темный фон, ближе к фото */
+  position: relative;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.valentine-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="rgba(138,43,226,0.1)"/></svg>')
+    repeat;
+  animation: floatHearts 15s infinite linear;
+  z-index: 0;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+button {
+  padding: 15px 40px;
+  font-size: 2rem;
+  background-color: rgba(255, 182, 193, 0.8);
+  border: 2px solid #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.3s, background-color 0.3s;
+  z-index: 1;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 105, 180, 0.9);
+}
+
+.heart-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.heart-animation {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+#heart-particles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heart-outline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation: revealHeart 0.5s ease-out 3s forwards; /* Появление красного сердца */
+}
+
+.message {
+  position: absolute;
+  bottom: 10%;
+  font-size: 2.5rem;
+  animation: fadeIn 1s ease-in-out 4s forwards;
+  opacity: 0;
+}
+
+/* Цитаты в левом верхнем углу */
+.quote-left {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  text-align: left;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+/* Перевод в правом верхнем углу */
+.quote-right {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  text-align: right;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.quote-text {
+  animation: fadeCycle 5s infinite;
+}
+
+/* Маленькие сердечки сверху */
+.top-hearts {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  height: 50px;
+  z-index: 2;
+}
+
+.small-heart {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="rgba(255,105,180,0.8)"/></svg>')
+    no-repeat center;
+  animation: floatDown 4s infinite ease-in-out;
+}
+
+/* Анимации */
+@keyframes floatHearts {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px;
+  }
+}
+
+@keyframes revealHeart {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes floatDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeCycle {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
