@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Игнорировать все .env, кроме .env
+.env.local
+.env.*.local
+!.env

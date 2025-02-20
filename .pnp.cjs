@@ -38,7 +38,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-hooks", "virtual:3e84e7a5990fb20d26535c6036aa97eea0373166f416bcdc5ca215981ac13e69a9fb772cb1baad915f530b78fcf391852dd0de524abac69c47e51e1441b67937#npm:5.1.0"],\
           ["eslint-plugin-react-refresh", "virtual:3e84e7a5990fb20d26535c6036aa97eea0373166f416bcdc5ca215981ac13e69a9fb772cb1baad915f530b78fcf391852dd0de524abac69c47e51e1441b67937#npm:0.4.19"],\
           ["globals", "npm:15.15.0"],\
-          ["list", "npm:2.0.19"],\
           ["react", "npm:19.0.0"],\
           ["react-dom", "virtual:3e84e7a5990fb20d26535c6036aa97eea0373166f416bcdc5ca215981ac13e69a9fb772cb1baad915f530b78fcf391852dd0de524abac69c47e51e1441b67937#npm:19.0.0"],\
           ["tsparticles", "npm:3.8.1"],\
@@ -3180,15 +3179,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["list", [\
-      ["npm:2.0.19", {\
-        "packageLocation": "../.yarn/berry/cache/list-npm-2.0.19-30aea28f10-10c0.zip/node_modules/list/",\
-        "packageDependencies": [\
-          ["list", "npm:2.0.19"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["locate-path", [\
       ["npm:6.0.0", {\
         "packageLocation": "../.yarn/berry/cache/locate-path-npm-6.0.0-06a1e4c528-10c0.zip/node_modules/locate-path/",\
@@ -3686,7 +3676,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-hooks", "virtual:3e84e7a5990fb20d26535c6036aa97eea0373166f416bcdc5ca215981ac13e69a9fb772cb1baad915f530b78fcf391852dd0de524abac69c47e51e1441b67937#npm:5.1.0"],\
           ["eslint-plugin-react-refresh", "virtual:3e84e7a5990fb20d26535c6036aa97eea0373166f416bcdc5ca215981ac13e69a9fb772cb1baad915f530b78fcf391852dd0de524abac69c47e51e1441b67937#npm:0.4.19"],\
           ["globals", "npm:15.15.0"],\
-          ["list", "npm:2.0.19"],\
           ["react", "npm:19.0.0"],\
           ["react-dom", "virtual:3e84e7a5990fb20d26535c6036aa97eea0373166f416bcdc5ca215981ac13e69a9fb772cb1baad915f530b78fcf391852dd0de524abac69c47e51e1441b67937#npm:19.0.0"],\
           ["tsparticles", "npm:3.8.1"],\
