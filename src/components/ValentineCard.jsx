@@ -9,7 +9,7 @@ import { getPost } from '../store/request';
 
 const ValentineCard = () => {
   const dispatch = useDispatch();
-  const { isLoading, error } = useSelector((state) => state.request);
+  const { isLoading, error } = useSelector((state) => state.date);
   const [isAccepted, setIsAccepted] = useState(false);
   const [name, setName] = useState('');
   const [showInput, setShowInput] = useState(true);
