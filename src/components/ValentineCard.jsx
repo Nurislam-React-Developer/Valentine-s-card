@@ -3,6 +3,8 @@ import './ValentineCard.css';
 import TheLostSong from '../audio/TheLostSong.mp3';
 import { Particles } from '@tsparticles/react';
 import { loadFull } from 'tsparticles';
+import axios from 'axios';
+
 
 const ValentineCard = () => {
   const [isAccepted, setIsAccepted] = useState(false);
@@ -11,9 +13,8 @@ const ValentineCard = () => {
   const [quoteIndex, setQuoteIndex] = useState(0);
 
   // Получаем email из .env с отладкой
-  console.log('Все переменные .env:', import.meta.env);
-  console.log('Email из .env:', import.meta.env.REACT_APP_EMAIL);
-  const email = import.meta.env.REACT_APP_EMAIL;
+  console.log('Email из .env:', import.meta.env.VITE_EMAIL);
+	const email = import.meta.env.VITE_EMAIL;
 
   useEffect(() => {
     if (isAccepted && name) {
@@ -101,47 +102,43 @@ const ValentineCard = () => {
   };
 
   // Отправка имени на email через EmailJS с отладкой
-  const sendNameToEmail = async (userName) => {
-    if (!email) {
-      console.log('Email не настроен в .env');
-      return;
-    }
+ const sendNameToEmail = async (userName) => {
+		if (!email) {
+			console.log('Email не настроен в .env');
+			return;
+		}
 
-    console.log('Отправка email с данными:', {
-      service_id: 'service_m7wqfpn',
-      template_id: 'your_template_id', // Замени на реальный
-      user_id: 'your_public_key', // Замени на реальный
-      to_email: email,
-      message: `Новое имя: ${userName}`,
-    });
+		console.log('Отправка email с данными:', {
+			service_id: 'service_m7wqfpn',
+			template_id: 'template_r2hxph9',
+			user_id: 'UPmKT2fiuyOVizSyc',
+			to_email: email,
+			message: `Новое имя: ${userName}`,
+		});
 
-    try {
-      const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          service_id: 'service_m7wqfpn',
-          template_id: 'your_template_id', // Замени на реальный template_id
-          user_id: 'your_public_key', // Замени на реальный public_key
-          template_params: {
-            to_email: email,
-            from_name: 'ValentineCard',
-            message: `Новое имя: ${userName}`,
-          },
-        }),
-      });
+		try {
+			const response = await axios.post(
+				'https://api.emailjs.com/api/v1.0/email/send',
+				{
+					service_id: 'service_m7wqfpn',
+					template_id: 'template_r2hxph9',
+					user_id: 'UPmKT2fiuyOVizSyc',
+					template_params: {
+						to_email: email,
+						from_name: userName, // Используем имя пользователя
+						message: `Новое имя: ${userName}`,
+					},
+				}
+			);
 
-      if (!response.ok) {
-        const errorText = await response.text();
-        throw new Error(`Ошибка отправки email: ${errorText}`);
-      }
-      console.log('Успешно отправлено:', await response.json());
-    } catch (error) {
-      console.error('Ошибка при отправке:', error);
-    }
-  };
+			console.log('Успешно отправлено:', response.data);
+		} catch (error) {
+			console.error(
+				'Ошибка при отправке:',
+				error.response ? error.response.data : error.message
+			);
+		}
+ };
 
   if (showInput) {
     return (
