@@ -3,7 +3,7 @@ import './ValentineCard.css';
 import TheLostSong from '../audio/TheLostSong.mp3';
 import { Particles } from '@tsparticles/react';
 import { loadFull } from 'tsparticles';
-import axios from 'axios';
+import ky from 'ky';
 
 
 const ValentineCard = () => {
@@ -116,29 +116,7 @@ const ValentineCard = () => {
 			message: `Новое имя: ${userName}`,
 		});
 
-		try {
-			const response = await axios.post(
-				'https://api.emailjs.com/api/v1.0/email/send',
-				{
-					service_id: 'service_m7wqfpn',
-					template_id: 'template_r2hxph9',
-					user_id: 'UPmKT2fiuyOVizSyc',
-					template_params: {
-						to_email: email,
-						from_name: userName, // Используем имя пользователя
-						message: `Новое имя: ${userName}`,
-					},
-				}
-			);
-
-			console.log('Успешно отправлено:', response.data);
-		} catch (error) {
-			console.error(
-				'Ошибка при отправке:',
-				error.response ? error.response.data : error.message
-			);
-		}
- };
+ }
 
   if (showInput) {
     return (

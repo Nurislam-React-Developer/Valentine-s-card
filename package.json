@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.5.1",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "axios": "^1.7.9",
+    "ky": "^1.7.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "redux": "^5.0.1",
     "tsparticles": "^3.8.1"
   },
   "devDependencies": {
