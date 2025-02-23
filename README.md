@@ -1,95 +1,99 @@
-# Valentine's Card Interactive Web Application
+# Интерактивная Валентинка - Веб-приложение
 
-A beautiful and interactive Valentine's card web application built with React and Vite. The application features an animated interface with floating hearts, particle effects, and personalized messages.
+![Валентинка](https://raw.githubusercontent.com/your-repo/valentine-card/main/public/preview.png)
 
-## Features
+Красивое и интерактивное веб-приложение для создания валентинок, разработанное с использованием React и Vite. Приложение включает в себя анимированный интерфейс с летающими сердечками, эффектами частиц и возможностью создания персонализированных сообщений.
 
-- Interactive Valentine's card with beautiful animations
-- Particle effects using tsParticles
-- Personalized message input
-- Responsive design with modern UI/UX
-- Smooth transitions and heart animations
+## 🎨 Особенности
 
-## Tech Stack
+![Анимации](https://raw.githubusercontent.com/your-repo/valentine-card/main/public/animations.gif)
+
+- ❤️ Интерактивная валентинка с красивыми анимациями
+- ✨ Эффекты частиц с использованием tsParticles
+- 💌 Возможность создания персонализированных сообщений
+- 📱 Адаптивный дизайн с современным UI/UX
+- 🎯 Плавные переходы и анимации сердечек
+
+## 🛠 Технический стек
 
 - React 19
 - Vite 6
-- tsParticles for animations
-- Modern CSS with animations
-- ESLint for code quality
+- tsParticles для анимаций
+- Современный CSS с анимациями
+- ESLint для качества кода
 
-## Prerequisites
+## 📋 Требования
 
-- Node.js (Latest LTS version recommended)
-- pnpm or yarn package manager
+- Node.js (рекомендуется последняя LTS версия)
+- Пакетный менеджер pnpm или yarn
 
-## Getting Started
+## 🚀 Начало работы
 
-1. Clone the repository
-2. Install dependencies using either:
+1. Клонируйте репозиторий
+2. Установите зависимости, используя одну из команд:
 
 ```bash
-# Using pnpm
+# Используя pnpm
 pnpm install
 
-# Using yarn
+# Используя yarn
 yarn install
 ```
 
-## Available Commands
+## 💻 Доступные команды
 
-### Start Development Server
+### Запуск сервера разработки
 
-You can start the development server using either pnpm or yarn:
+Вы можете запустить сервер разработки, используя pnpm или yarn:
 
 ```bash
-# Using pnpm
+# Используя pnpm
 pnpm start
 
-# Using yarn
+# Используя yarn
 yarn start
 ```
 
-This will start the development server on `http://localhost:5173` with hot module replacement (HMR) enabled.
+Это запустит сервер разработки на `http://localhost:5173` с включенной горячей заменой модулей (HMR).
 
-### Build for Production
+### Сборка для продакшена
 
 ```bash
-# Using pnpm
+# Используя pnpm
 pnpm build
 
-# Using yarn
+# Используя yarn
 yarn build
 ```
 
-### Preview Production Build
+### Предпросмотр продакшен-сборки
 
 ```bash
-# Using pnpm
+# Используя pnpm
 pnpm preview
 
-# Using yarn
+# Используя yarn
 yarn preview
 ```
 
-## Development Tools
+## 🔧 Инструменты разработки
 
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) - Uses [SWC](https://swc.rs/) for Fast Refresh
-- ESLint configuration for React
-- Hot Module Replacement (HMR)
-- TypeScript support
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) - Использует [SWC](https://swc.rs/) для Fast Refresh
+- Конфигурация ESLint для React
+- Горячая замена модулей (HMR)
+- Поддержка TypeScript
 
-## Project Structure
+## 📁 Структура проекта
 
 ```
 src/
-  ├── components/     # React components
-  ├── assets/         # Static assets
-  ├── audio/          # Audio files
-  ├── store/          # State management
-  └── api/            # API integrations
+  ├── components/     # React компоненты
+  ├── assets/         # Статические ресурсы
+  ├── audio/          # Аудио файлы
+  ├── store/          # Управление состоянием
+  └── api/            # API интеграции
 ```
 
-## License
+## 📝 Лицензия
 
 MIT
