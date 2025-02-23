@@ -3,10 +3,13 @@ import './ValentineCard.css';
 import TheLostSong from '../audio/TheLostSong.mp3';
 import { Particles } from '@tsparticles/react';
 import { loadFull } from 'tsparticles';
-import ky from 'ky';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPost } from '../store/request';
 
 
 const ValentineCard = () => {
+  const dispatch = useDispatch();
+  const { isLoading, error } = useSelector((state) => state.request);
   const [isAccepted, setIsAccepted] = useState(false);
   const [name, setName] = useState('');
   const [showInput, setShowInput] = useState(true);
@@ -103,20 +106,13 @@ const ValentineCard = () => {
 
   // Отправка имени на email через EmailJS с отладкой
  const sendNameToEmail = async (userName) => {
-		if (!email) {
-			console.log('Email не настроен в .env');
-			return;
-		}
-
-		console.log('Отправка email с данными:', {
-			service_id: 'service_m7wqfpn',
-			template_id: 'template_r2hxph9',
-			user_id: 'UPmKT2fiuyOVizSyc',
-			to_email: email,
-			message: `Новое имя: ${userName}`,
-		});
-
- }
+    try {
+      await dispatch(getPost({ name: userName })).unwrap();
+      console.log('Name sent successfully');
+    } catch (error) {
+      console.error('Failed to send name:', error);
+    }
+  }
 
   if (showInput) {
     return (
