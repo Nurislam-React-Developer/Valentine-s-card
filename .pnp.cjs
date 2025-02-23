@@ -27,6 +27,7 @@ const RAW_RUNTIME_STATE =
       [null, {\
         "packageLocation": "./",\
         "packageDependencies": [\
+          ["@emailjs/browser", "npm:4.4.1"],\
           ["@eslint/js", "npm:9.21.0"],\
           ["@reduxjs/toolkit", "virtual:3e84e7a5990fb20d26535c6036aa97eea0373166f416bcdc5ca215981ac13e69a9fb772cb1baad915f530b78fcf391852dd0de524abac69c47e51e1441b67937#npm:2.5.1"],\
           ["@tsparticles/engine", "npm:3.8.1"],\
@@ -49,6 +50,15 @@ const RAW_RUNTIME_STATE =
           ["vite", "virtual:3e84e7a5990fb20d26535c6036aa97eea0373166f416bcdc5ca215981ac13e69a9fb772cb1baad915f530b78fcf391852dd0de524abac69c47e51e1441b67937#npm:6.1.1"]\
         ],\
         "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@emailjs/browser", [\
+      ["npm:4.4.1", {\
+        "packageLocation": "../.yarn/berry/cache/@emailjs-browser-npm-4.4.1-64a2cb04f8-10c0.zip/node_modules/@emailjs/browser/",\
+        "packageDependencies": [\
+          ["@emailjs/browser", "npm:4.4.1"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["@esbuild/aix-ppc64", [\
@@ -3821,6 +3831,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./",\
         "packageDependencies": [\
           ["project-grok-ai", "workspace:."],\
+          ["@emailjs/browser", "npm:4.4.1"],\
           ["@eslint/js", "npm:9.21.0"],\
           ["@reduxjs/toolkit", "virtual:3e84e7a5990fb20d26535c6036aa97eea0373166f416bcdc5ca215981ac13e69a9fb772cb1baad915f530b78fcf391852dd0de524abac69c47e51e1441b67937#npm:2.5.1"],\
           ["@tsparticles/engine", "npm:3.8.1"],\
