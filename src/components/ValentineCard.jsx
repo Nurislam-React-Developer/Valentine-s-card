@@ -12,7 +12,6 @@ const ValentineCard = () => {
   const [showInput, setShowInput] = useState(true);
   const [quoteIndex, setQuoteIndex] = useState(0);
 
-  // Получаем email из .env с отладкой
   console.log('Email из .env:', import.meta.env.VITE_EMAIL);
 	const email = import.meta.env.VITE_EMAIL;
 
@@ -97,11 +96,10 @@ const ValentineCard = () => {
     if (name.trim()) {
       setShowInput(false);
       setIsAccepted(true);
-      sendNameToEmail(name); // Отправляем имя на email
+      sendNameToEmail(name); 
     }
   };
 
-  // Отправка имени на email через EmailJS с отладкой
  const sendNameToEmail = async (userName) => {
 		if (!email) {
 			console.log('Email не настроен в .env');
