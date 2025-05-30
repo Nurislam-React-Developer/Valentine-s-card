@@ -26,4 +26,4 @@ dist-ssr
 # Игнорировать все .env, кроме .env
 .env.local
 .env.*.local
-!.env
+.env
