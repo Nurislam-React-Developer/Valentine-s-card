@@ -23,7 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# Игнорировать все .env, кроме .env
-.env.local
-.env.*.local
+# ...existing code...
 .env
+.env.local
+.env.*
+!.env.example
