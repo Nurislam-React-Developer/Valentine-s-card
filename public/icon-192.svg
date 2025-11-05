@@ -1,0 +1,40 @@
+<svg width="192" height="192" viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff69b4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff1493;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dc143c;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="96" cy="96" r="88" fill="url(#heartGradient)" opacity="0.1"/>
+  
+  <!-- Main heart -->
+  <path d="M96 160 C96 160, 40 120, 40 80 C40 60, 56 44, 76 44 C86 44, 96 50, 96 50 C96 50, 106 44, 116 44 C136 44, 152 60, 152 80 C152 120, 96 160, 96 160 Z" 
+        fill="url(#heartGradient)" 
+        filter="url(#glow)"/>
+  
+  <!-- Sparkles -->
+  <g fill="#ffd700" opacity="0.8">
+    <circle cx="60" cy="60" r="3"/>
+    <circle cx="132" cy="60" r="2"/>
+    <circle cx="150" cy="100" r="2.5"/>
+    <circle cx="42" cy="100" r="2"/>
+    <circle cx="70" cy="140" r="1.5"/>
+    <circle cx="122" cy="140" r="2"/>
+  </g>
+  
+  <!-- Small hearts -->
+  <g fill="#ff69b4" opacity="0.6">
+    <path d="M50 50 C50 50, 35 40, 35 30 C35 25, 40 20, 45 20 C47.5 20, 50 22.5, 50 22.5 C50 22.5, 52.5 20, 55 20 C60 20, 65 25, 65 30 C65 40, 50 50, 50 50 Z"/>
+    <path d="M142 142 C142 142, 127 132, 127 122 C127 117, 132 112, 137 112 C139.5 112, 142 114.5, 142 114.5 C142 114.5, 144.5 112, 147 112 C152 112, 157 117, 157 122 C157 132, 142 142, 142 142 Z"/>
+  </g>
+</svg>

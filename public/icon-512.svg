@@ -1,0 +1,75 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heartGradient512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff69b4;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#ff1493;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#dc143c;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b22222;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </radialGradient>
+    <filter id="glow512">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="sparkleGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGradient)"/>
+  
+  <!-- Main heart -->
+  <path d="M256 420 C256 420, 120 320, 120 200 C120 150, 150 120, 190 120 C220 120, 256 140, 256 140 C256 140, 292 120, 322 120 C362 120, 392 150, 392 200 C392 320, 256 420, 256 420 Z" 
+        fill="url(#heartGradient512)" 
+        filter="url(#glow512)"/>
+  
+  <!-- Heart highlight -->
+  <path d="M256 420 C256 420, 140 340, 140 220 C140 180, 165 155, 195 155 C215 155, 235 165, 256 180 C256 180, 256 140, 256 140 C256 140, 292 120, 322 120 C362 120, 392 150, 392 200 C392 320, 256 420, 256 420 Z" 
+        fill="url(#heartGradient512)" 
+        opacity="0.3"/>
+  
+  <!-- Sparkles around heart -->
+  <g fill="#ffd700" filter="url(#sparkleGlow)">
+    <circle cx="150" cy="150" r="6"/>
+    <circle cx="362" cy="150" r="5"/>
+    <circle cx="400" cy="250" r="7"/>
+    <circle cx="112" cy="250" r="5"/>
+    <circle cx="180" cy="350" r="4"/>
+    <circle cx="332" cy="350" r="6"/>
+    <circle cx="80" cy="180" r="3"/>
+    <circle cx="432" cy="180" r="4"/>
+    <circle cx="90" cy="320" r="5"/>
+    <circle cx="422" cy="320" r="3"/>
+  </g>
+  
+  <!-- Small decorative hearts -->
+  <g fill="#ff69b4" opacity="0.7">
+    <path d="M120 120 C120 120, 90 100, 90 75 C90 62.5, 102.5 50, 115 50 C122.5 50, 120 55, 120 55 C120 55, 127.5 50, 135 50 C147.5 50, 160 62.5, 160 75 C160 100, 120 120, 120 120 Z"/>
+    <path d="M392 392 C392 392, 362 372, 362 347 C362 334.5, 374.5 322, 387 322 C394.5 322, 392 327, 392 327 C392 327, 399.5 322, 407 322 C419.5 322, 432 334.5, 432 347 C432 372, 392 392, 392 392 Z"/>
+    <path d="M80 300 C80 300, 60 285, 60 270 C60 262.5, 67.5 255, 75 255 C78.75 255, 80 257.5, 80 257.5 C80 257.5, 81.25 255, 85 255 C92.5 255, 100 262.5, 100 270 C100 285, 80 300, 80 300 Z"/>
+    <path d="M432 300 C432 300, 412 285, 412 270 C412 262.5, 419.5 255, 427 255 C430.75 255, 432 257.5, 432 257.5 C432 257.5, 433.25 255, 437 255 C444.5 255, 452 262.5, 452 270 C452 285, 432 300, 432 300 Z"/>
+  </g>
+  
+  <!-- Floating particles -->
+  <g fill="#ff69b4" opacity="0.4">
+    <circle cx="200" cy="100" r="2"/>
+    <circle cx="312" cy="100" r="1.5"/>
+    <circle cx="450" cy="200" r="2"/>
+    <circle cx="62" cy="200" r="1"/>
+    <circle cx="100" cy="400" r="1.5"/>
+    <circle cx="412" cy="400" r="2"/>
+    <circle cx="50" cy="350" r="1"/>
+    <circle cx="462" cy="350" r="1.5"/>
+  </g>
+</svg>
